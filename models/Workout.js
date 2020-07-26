@@ -17,30 +17,31 @@ const WorkoutSchema = new Schema({
       name: {
         type: String,
         trim: true,
-        required: "Your name is required",
+        required: "Your name is required"
       },
       duration: {
         type: Number,
-        required: "Please enter duration time",
+        required: "Please enter duration time"
       },
       weight: {
-        type: Number,
+        type: Number
       },
       reps: {
-        type: Number,
+        type: Number
       },
       sets: {
-        type: Number,
+        type: Number
       },
       distance: {
-        type: Number,
-      },
-    },
+        type: Number
+      }
+    }
   ],
 
-//   toJSON: {
-//     virtuals: true,
-//   },
+  totalDuration: {
+    type: Number,
+    default: 0
+  }
 });
 
 

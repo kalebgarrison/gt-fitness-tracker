@@ -15,7 +15,7 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/populatedb", { useNewUrlParser: true });
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/Workout", { useNewUrlParser: true });
 
 const connection = mongoose.connection;
 
@@ -35,7 +35,9 @@ app.get("/api/config", (req, res) => {
   });
 });
 
-// app.use(PizzaController);
+// Required Routes
+require('./routes/api-routes')(app);
+require('./routes/view-routes')(app);
 
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
