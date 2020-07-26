@@ -19,6 +19,8 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/populatedb", { 
 
 const connection = mongoose.connection;
 
+// mongoose.connect(MONGODB_URI);
+
 connection.on("connected", () => {
   console.log("Mongoose successfully connected.");
 });
