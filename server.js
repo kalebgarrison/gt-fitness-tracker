@@ -35,7 +35,9 @@ app.get("/api/config", (req, res) => {
   });
 });
 
-// app.use(PizzaController);
+// Required Routes
+require('./routes/api-routes')(app);
+require('./routes/view-routes')(app);
 
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
