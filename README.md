@@ -18,6 +18,7 @@ Any feedback can be provided via email at [kalebgarrison@gmail.com](mailto:kaleb
 1. Open the Heroku link. 
 2. Create a new workout. 
 3. Complete the workout.
+4. View your stats.
 
 ## Usage 
 
