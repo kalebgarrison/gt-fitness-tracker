@@ -36,7 +36,7 @@ module.exports = function (app) {
         sets: data.sets,
         distance: data.distance
     }], 
-    totalDuration: data.totalDuration
+    $inc: {totalDuration: data.totalDuration}
 }})
 .then(function (dbUpdateOne){
     res.json(dbUpdateOne);
